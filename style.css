@@ -1,0 +1,245 @@
+/* Reset et base */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f9ff;
+    color: #333; 
+    box-sizing: border-box;
+}
+/* 
+.header-container {
+    border-bottom: 1px solid #e0e0e0;
+} */
+
+.header {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* padding: 10px 20px; */
+    justify-content: space-between;
+}
+.logo {
+    height: 200px;
+    width: auto;
+    margin-right: auto;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.main-nav a:hover {
+    background: #e3f2fd;
+    color: #1976d2;
+    transform: translateY(-2px);
+}
+
+/* Suppression de l'espace entre header et banner */
+.banner {
+    margin-top: 0;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+.main-nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.main-nav a:hover {
+    background: #e3f2fd;
+    color: #1976d2;
+    transform: translateY(-2px);
+}
+
+/* Suppression de l'espace entre header et banner */
+.banner {
+    margin-top: 0;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+/* Bannière */
+.banner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+     image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    filter: contrast(1.05) saturate(1.1);
+}
+
+.banner-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;  
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+     /* background-color: rgba(0, 0, 0, 0.5);  */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.banner:hover img {
+    transform: scale(1.03); /* Effet zoom subtil au survol */
+}
+
+/* Cartes */
+.cartes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carte {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.carte:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carte img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.carte h2 {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.3em;
+    background-color: #e3f2fd;
+}
+
+/* Horloge */
+.horloge-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.horloge {
+    display: inline-block;
+    font-size: 1.8em;
+    padding: 10px 20px;
+    background-color: #bbdefb;
+    border-radius: 50px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Coin jeux */
+.jeux-container {
+    background-color: #e8f5e9;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.jeux-container h3 {
+    font-size: 1.8em;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.jeux-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.jeu-lien {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.jeu-lien:hover {
+    background-color: #388e3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 1.5em;
+    }
+    
+    .cartes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 1.2em;
+        padding: 5px 10px;
+    }
+    
+    .cartes {
+        grid-template-columns: 1fr;
+    }
+}
