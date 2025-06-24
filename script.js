@@ -31,3 +31,31 @@ document.querySelectorAll('.main-nav a').forEach(link => {
         this.classList.add('active');
     });
 });
+// script.js
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Active le bouton cliqué
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Change la langue
+        const lang = this.dataset.lang;
+        changeLanguage(lang);
+    });
+});
+
+function changeLanguage(lang) {
+    // Texte à traduire avec des data-attributs
+    document.querySelectorAll('[data-fr], [data-en]').forEach(element => {
+        element.textContent = element.getAttribute(`data-${lang}`);
+    });
+    
+    // Optionnel : sauvegarde dans localStorage
+    localStorage.setItem('preferredLang', lang);
+}
+
+// Au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferredLang') || 'fr';
+    document.querySelector(`.lang-btn[data-lang="${savedLang}"]`).click();
+});

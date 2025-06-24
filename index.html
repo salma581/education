@@ -6,64 +6,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-      <img src="assets/images/principale/logo.png" alt="logo">
-      <nav class="main-nav">
-          <ul>
-            <li><a href="#cartes">Cartes</a></li>
-            <li><a href="#jeux">Jeux</a></li>
-         </ul>
-      </nav>
-   </div>
+  <div class="header">
     <div class="banner">
-        <img src="assets/images/principale/banner.png" alt="banner">
-        <div class="banner-title">Soyez les bienvenus dans votre univers !</div>
+        <div class="logo-container">
+            <img src="assets/images/principale/logo.png" alt="logo" class="logo">
+            <div class="banner-title" data-fr="Soyez les bienvenus dans votre univers !" 
+                          data-en="Welcome to your universe!"></div>
+        </div>
+        <img src="assets/images/principale/banner.png" alt="banner" class="banner-image">
     </div>
+
+<div class="language-switcher">
+    <button class="lang-btn active" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+</div>
+</div>
+
+<nav class="main-nav">
+    <ul>
+       <li><a href="#cartes" data-fr="Cartes" data-en="Cards"></a></li>
+        <li><a href="#jeux" data-fr="Jeux" data-en="Games"></a></li>
+    </ul>
+</nav>
     <div id="cartes" class="cartes">
-        <!-- Carte 1 -->
-        <a href="ferme.html" class="carte" id="carte1">
-            <img src="assets/images/principale/ferme.png" alt="Ferme">
-            <h2>Animaux de la Ferme </h2>
-        </a>
+    <!-- Carte 1 -->
+    <a href="cartes/ferme.html" class="carte">
+        <img src="assets/images/principale/ferme.png" alt="Ferme">
+        <h2 data-fr="Animaux de la Ferme" data-en="Farm Animals"></h2>
+    </a>
 
-        <!-- Carte 2 -->
-        <a href="sauvages.html" class="carte" id="carte2">
-            <img src="assets/images/principale/zoo.png" alt="Sauvages">
-            <h2>Animaux Sauvages </h2>
-        </a>
+    <!-- Carte 2 -->
+    <a href="cartes/ferme.html" class="carte">
+        <img src="assets/images/principale/zoo.png" alt="Sauvages">
+        <h2 data-fr="Animaux Sauvages" data-en="Wild Animals"></h2>
+    </a>
 
-        <!-- Carte 3 -->
-       <a href="océan.html" class="carte" id="carte2">
-            <img src="assets/images/principale/océan.png" alt="océan">
-            <h2>Animaux de l'océan </h2>
-        </a>
-        <!-- Carte 4 -->
-        <a href="flags.html" class="carte" id="carte2">
-            <img src="assets/images/principale/flag.png" alt="flag">
-            <h2>Les drapeaux </h2>
-        </a>
-        <!-- Carte 5 -->
-        <a href="légumes.html" class="carte" id="carte2">
-            <img src="assets/images/principale/legumes.png" alt="légumes">
-            <h2>Les légumes </h2>
-        </a>
-        <!-- Carte 6 -->
-        <a href="fruits.html" class="carte" id="carte2">
-            <img src="assets/images/principale/fruits.png" alt="fruit">
-            <h2>Les fruits </h2>
-        </a>
-    </div>
-         <div class="horloge-container">
-        <div class="horloge" id="horloge">🕒 14:30</div>
-    </div>
+    <!-- Carte 3 -->
+    <a href="cartes/océan.html" class="carte">
+        <img src="assets/images/principale/océan.png" alt="Océan">
+        <h2 data-fr="Animaux de l'océan" data-en="Ocean Animals"></h2>
+    </a>
+
+    <!-- Carte 4 -->
+    <a href="cartes/flags.html" class="carte">
+        <img src="assets/images/principale/flag.png" alt="Drapeaux">
+        <h2 data-fr="Les drapeaux" data-en="Flags"></h2>
+    </a>
+
+    <!-- Carte 5 -->
+    <a href="cartes/légumes.html" class="carte">
+        <img src="assets/images/principale/legumes.png" alt="Légumes">
+        <h2 data-fr="Les légumes" data-en="Vegetables"></h2>
+    </a>
+
+    <!-- Carte 6 -->
+    <a href="cartes/fruits.html" class="carte">
+        <img src="assets/images/principale/fruits.png" alt="Fruits">
+        <h2 data-fr="Les fruits" data-en="Fruits"></h2>
+    </a>
+</div>
+             <div class="horloge-container">
+             <div class="horloge" id="horloge">🕒 14:30</div>
+         </div>
 
     <div id="jeux" class="jeux-container">
-        <h3>Coin des Jeux</h3>
-        <div class="jeux-links">
-            <a href="jeu1.html" class="jeu-lien">Memory des Animaux</a>
-            <a href="jeu2.html" class="jeu-lien">Quiz Sonore</a>
-            <a href="jeu3.html" class="jeu-lien">Coloriage</a>
-        </div>
+    <h3 data-fr="Coin des Jeux" data-en="Games Corner"></h3>
+    <div class="jeux-links">
+        <a href="jeu1.html" class="jeu-lien" data-fr="Memory des Animaux" data-en="Animals Memory"></a>
+        <a href="jeu2.html" class="jeu-lien" data-fr="Quiz Sonore" data-en="Sound Quiz"></a>
+        <a href="jeu3.html" class="jeu-lien" data-fr="Coloriage" data-en="Coloring"></a>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
